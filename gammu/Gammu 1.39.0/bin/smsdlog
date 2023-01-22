@@ -1,0 +1,29 @@
+Mon 2018/04/23 22:04:37 gammu-smsd: Connected to Database odbc: simasku on mysql_odbc
+Mon 2018/04/23 22:04:37 gammu-smsd: Created Windows RW shared memory at 00160000
+Mon 2018/04/23 22:04:37 gammu-smsd: Starting phone communication...
+Mon 2018/04/23 22:04:42 gammu-smsd: Inserting phone info
+Mon 2018/04/23 22:04:43 gammu-smsd: Read 1 messages
+Mon 2018/04/23 22:04:43 gammu-smsd: Message without SMSC, assuming you want to use the one from phone
+Mon 2018/04/23 22:08:47 gammu-smsd: Message without SMSC, assuming you want to use the one from phone
+Tue 2018/05/29 11:40:41 gammu-smsd: Failed to seek to first row!
+Tue 2018/05/29 11:40:41 gammu-smsd: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Tue 2018/05/29 11:40:41 gammu-smsd: Stopping Gammu smsd: No error. (NONE[1])
+Tue 2018/05/29 12:03:54 gammu-smsd: Using SQL service
+Tue 2018/05/29 12:03:54 gammu-smsd: Configuring Gammu SMSD...
+Tue 2018/05/29 12:03:54 gammu-smsd: PIN code is "1234"
+Tue 2018/05/29 12:03:54 gammu-smsd: CommTimeout=30, SendTimeout=30, ReceiveFrequency=15, ResetFrequency=0, HardResetFrequency=0
+Tue 2018/05/29 12:03:54 gammu-smsd: checks: CheckSecurity=1, CheckBattery=1, CheckSignal=1, CheckNetwork=1
+Tue 2018/05/29 12:03:54 gammu-smsd: mode: Send=1, Receive=1
+Tue 2018/05/29 12:03:54 gammu-smsd: deliveryreport = no
+Tue 2018/05/29 12:03:54 gammu-smsd: phoneid = 
+Tue 2018/05/29 12:03:54 gammu-smsd: Connected to driver myodbc5a.dll
+Tue 2018/05/29 12:03:54 gammu-smsd: Execute SQL: SELECT  * FROM gammu  LIMIT 1
+Tue 2018/05/29 12:03:54 gammu-smsd: Execute SQL: SELECT  * FROM inbox  LIMIT 1
+Tue 2018/05/29 12:03:54 gammu-smsd: Execute SQL: SELECT  * FROM sentitems  LIMIT 1
+Tue 2018/05/29 12:03:54 gammu-smsd: Execute SQL: SELECT  * FROM outbox  LIMIT 1
+Tue 2018/05/29 12:03:54 gammu-smsd: Execute SQL: SELECT  * FROM outbox_multipart  LIMIT 1
+Tue 2018/05/29 12:03:54 gammu-smsd: Execute SQL: SELECT  * FROM phones  LIMIT 1
+Tue 2018/05/29 12:03:54 gammu-smsd: Execute SQL: SELECT `Version` FROM gammu
+Tue 2018/05/29 12:03:54 gammu-smsd: Failed to seek to first row!
+Tue 2018/05/29 12:03:54 gammu-smsd: Initialisation failed, stopping Gammu smsd: Unknown error. (UNKNOWN[27])
+Tue 2018/05/29 12:03:54 gammu-smsd: Stopping Gammu smsd: No error. (NONE[1])

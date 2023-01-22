@@ -1,0 +1,101 @@
+
+        <script src='<?php echo base_url();?>assets/tinymce/js/tinymce/tinymce.min.js'></script>
+        <script>tinymce.init({ selector:'textarea' });</script> 
+<div class="main-content">
+                <div class="main-content-inner">
+                    <div class="breadcrumbs ace-save-state" id="breadcrumbs">
+                        <ul class="breadcrumb">
+                            <li>
+                                <i class="ace-icon fa fa-home home-icon"></i>
+                                <a href="<?php echo base_url('home'); ?>">Beranda</a>
+                            </li>
+
+                            <li>
+                                <a href="#">Data Surat</a>
+                            </li>
+                            <li>
+                                <a href="<?php echo base_url('sk'); ?>">Surat Keluar</a>
+                            </li>
+                            <li class="active">Tambah Surat Keluar</li>
+                        </ul><!-- /.breadcrumb -->
+
+                        
+                    </div>
+
+                    <div class="page-content">
+                        <div class="page-header">
+                            <h4><p class="text-info">Isi Data berikut untuk menambah Surat Keluar.</p></h4>
+                        </div><!-- /.page-header -->
+
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <!-- PAGE CONTENT BEGINS -->
+                                <form class="form-horizontal" role="form" action="<?php echo base_url('sk/add'); ?>" method="POST" enctype="multipart/form-data">    
+                                    <div class="form-group">
+                                        <label for="id_klasifikasi" class="col-sm-3 control-label no-padding-right" for="form-field-1">Klasifikasi :</label> 
+                                        <div class="col-sm-9">
+                                               <?php 
+                                        $att = 'class="chosen-select form-control"';
+                                        echo form_dropdown('id_klasifikasi',$loadklasifikasi,$selectedklas,$att);?>
+                                            </div>
+                                    </div><!-- /.row -->
+                                    <div class="form-group">
+                                        <label for="jenis_surat_keluar" class="col-sm-3 control-label no-padding-right" for="form-field-1">Jenis Surat :</label> 
+                                        <div id="jenis_surat_keluar" class="col-sm-9"><input type="text" name="jenis_surat_keluar" class="form-control" placeholder="Jenis Surat" required ></div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="perihal" class="col-sm-3 control-label no-padding-right" for="form-field-1">Perihal :</label> 
+                                        <div id="perihal" class="col-sm-9"><input type="text" name="perihal" class="form-control" placeholder="Perihal" required ></div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="dikirim" class="col-sm-3 control-label no-padding-right" for="form-field-1">Dikirim :</label> 
+                                        <div id="dikirim" class="col-sm-9"><input type="text" name="dikirim" class="form-control" placeholder="Dikirim" required ></div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="tgl_penetapan" class="col-sm-3 control-label no-padding-right" for="form-field-1">Tanggal Penetapan :</label> 
+                                        <div id="tgl_penetapan" class="col-sm-9"><input type="date" name="tgl_penetapan" class="form-control" required ></div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="isi" class="col-sm-3 control-label no-padding-right">Isi :</label> 
+                                        <div class="col-sm-9">
+                                            <textarea name="isi" id="texteditor" class="tinymce"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="input_file" class="col-sm-3 control-label no-padding-right">File Arsip</label> <div class="col-sm-9">
+                                        <input type="file" id="file_arsip" name="file_arsip" accept="application/pdf" class="form-control">
+                                        <p class="help-block">Gunakan hanya file dengan format PDF.</p> 
+                                    </div>
+                                    </div>
+                                    <div class="clearfix form-actions">
+                                        <div class="col-md-offset-3 col-md-9">
+                                            <button type="submit" name="simpan" class="btn btn-primary">
+                                                <i class="fa fa-save" aria-hidden="true"></i>  
+                                                Simpan
+                                            </button>
+                                            &nbsp; &nbsp; &nbsp;
+                                            <a href="<?php echo base_url('sk'); ?>" class="btn btn-info">
+                                                <i class="fa fa-arrow-left"></i>
+                                                Kembali
+                                            </a>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div><!-- /.col -->
+                        </div><!-- /.row -->
+                    </div><!-- /.page-content -->
+                </div>
+            </div><!-- /.main-content -->
+            <script type="text/javascript">
+                
+                tinymce.init({
+    selector: "#texteditor",
+    mode : "textareas";
+    plugins : "autolink,lists,pagebreak,style,layer,table,save,advhr,advimage,advlink,emotions,iespell,inlinepopups,insertdatetime,preview,media,searchplace,print,contextmenu,paste,directionality,fullscreen,noneditable,visualchars,nonbreaking,xhtmlxtras,template,wordcount,advlist,autosave,visualblocks",
+    setup: function (editor) {
+        editor.on('change', function () {
+            editor.save();
+        });
+    }
+});
+            </script>
